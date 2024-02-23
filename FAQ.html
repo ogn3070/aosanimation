@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ/Accordion</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    What is HTML:
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    HTML is a structure language for creating website layout.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item mt-1 ">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    What is CSS:
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    CSS is a styling language for beautifying HTML elements .
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item mt-1 ">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                    aria-expanded="true" aria-controls="collapseThree">
+                    What is JavaScript?:
+                </button>
+            </h2>
+
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    JavaScript is a programming language for adding functional to our website.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <!-- Modal trigger button -->
+    <button type="button" class="btn btn-primary btn-lg mt-3 " data-bs-toggle="modal" data-bs-target="#modalId">
+        Form
+    </button>
+
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white m-auto mt-1 " >
+                    <h4 class="modal-titl" id="modalTitleId">Login Form</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="row mt-2">
+                            <div class="col-md col-12 ">
+                                <label class="form-label fw-bolder" for="">FirstName:</label>
+                                <input style="border:1px red solid" class="form-control" type="text">
+                            </div>
+
+                            <div class="col-md-6 col-12 ">
+                                <label for="" class="form-label fw-bolder">LastName:</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="col-md-6 col-12 ">
+                                <label for="" class="form-label fw-bolder">Email:</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="col-md-6 col-12 ">
+                                <label for="" class="form-label fw-bolder">Password:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-dark btn-lg mt-4 ">Register</button>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional: Place to the bottom of scripts -->
+    <script>
+        const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+
+    </script>
+
+    <script src="./bootstrap/bootstrap.js"></script>
+</body>
+
+</html>
